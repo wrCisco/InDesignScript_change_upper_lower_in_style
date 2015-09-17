@@ -103,7 +103,7 @@ custom_value, stile_sel) {
     inizio_frase_dopo_punto: "\\.\\s[«\\-\"]?\\w",
     inizio_frase: "[\\.?!…]\\s[«\\-—\"]?\\w",
     inizio_frase_anche_senza_spazio: "[\\.?!…]\\s*?[«\\-—\"]?\\w",
-    inizio_riga: "\\n\\w",
+    inizio_riga: "\\n[^\\w]*?\\w",
     inizio_parola: "\\b\\w",
     tutti_i_caratteri: ".+",
     tutte_tranne_iniziali: "(?<!\\b)\\w",
