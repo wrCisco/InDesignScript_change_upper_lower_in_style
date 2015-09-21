@@ -161,8 +161,6 @@ custom_value, stile_sel) {
     alert("Nessun cambiamento effettuato.");
   }
   
-  app.findGrepPreferences = NothingEnum.nothing;
-  app.changeGrepPreferences = NothingEnum.nothing;
 }
 
 function find_and_updown(converti) {
