@@ -56,6 +56,8 @@ with(myDialog.dialogColumns.add()){
         var valore_opzione9 = textEditboxes.add(
         {editContents:"Scrivi una tua espressione regolare", minWidth:300});
       }
+      staticTexts.add({staticLabel:"N.B. Le iniziali di paragrafo, di riga e di frase possono essere precedute da uno o più simboli"}); 
+      staticTexts.add({staticLabel:"(punteggiatura o altro che non sia né una lettera né un numero)."});
     }
   }
 }
@@ -100,9 +102,9 @@ custom_value, stile_sel) {
   
   var elencoGrep = {
     inizio_paragrafo: "(?<!\\n)^[^\\w]*?\\b\\w", //[[:punct:]]\\s*
-    inizio_frase_dopo_punto: "\\.\\s[«\\-\"]?\\w",
-    inizio_frase: "[\\.?!…]\\s[«\\-—\"]?\\w",
-    inizio_frase_anche_senza_spazio: "[\\.?!…]\\s*?[«\\-—\"]?\\w",
+    inizio_frase_dopo_punto: "\\.\\s[^\\w]*?\\w", //[«\\-–—\"'§([]?\\s?\\w",
+    inizio_frase: "[\\.?!…]\\s[^\\w]*?\\w", //[«\\-–—\"'§([]?\\s?\\w",
+    inizio_frase_anche_senza_spazio: "[\\.?!…]\\s*?[^\\w]*?\\w", //[«\\-–—\"'§([]?\\s?\\w",
     inizio_riga: "\\n[^\\w]*?\\w",
     inizio_parola: "\\b\\w",
     tutti_i_caratteri: ".+",
